@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Paw : MonoBehaviour {
+public class Paw : MonoBehaviour
+{
     [SerializeField]
     private Transform TimeZeroPos;
     [SerializeField]
