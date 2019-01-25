@@ -8,14 +8,19 @@ public class Paw : MonoBehaviour {
     [SerializeField]
     private Transform Time100Pos;
 
+    //move from one to the other by moving linearly from pos0 to pos100 along X
+    //by reading timer inside GameTimer, updating it by time and GameTimer's multiplier variable
 
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update ()
+
+    void Start ()
     {
 		
 	}
+
+    //paw position & timer updating handled in fixedUpdate
+    private void FixedUpdate()
+    {
+        
+    }
+
 }
