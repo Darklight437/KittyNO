@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Paw : MonoBehaviour
 {
-    [SerializeField]
+    
     private Transform TimeZeroPos;
+    //finished position
     [SerializeField]
     private Transform Time100Pos;
 
@@ -15,13 +16,13 @@ public class Paw : MonoBehaviour
 
     void Start ()
     {
-		
+        TimeZeroPos = transform;
 	}
 
     //paw position & timer updating handled in fixedUpdate
-    private void FixedUpdate()
+    private void Update()
     {
-        
+        transform.position = Vector3.Lerp(TimeZeroPos.position, Time100Pos.position, GameTimer.getTimeRatio());
     }
 
 }
