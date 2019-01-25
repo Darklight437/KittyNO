@@ -6,5 +6,10 @@ static class GameTimer
 {
     public static float timer;
     public static float timeMultiplier;
+    public static float endTime;
 
+    public static float getTimeRatio()
+    {
+        return timer / endTime;
+    }
 }
