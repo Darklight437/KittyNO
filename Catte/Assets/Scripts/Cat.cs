@@ -31,13 +31,14 @@ public class Cat : MonoBehaviour
     [SerializeField]
     private List<Texture2D> eyeTextures;
 
-	// Use this for initialization
+    [SerializeField]
+    private float timeLimit;
+
 	void Start ()
     {
-		
+        GameTimer.endTime = timeLimit;
 	}
 	
-	// Update is called once per frame
 	void Update ()
     {
         UpdateEyes();
