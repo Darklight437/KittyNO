@@ -47,7 +47,7 @@ public class Cat : MonoBehaviour
 
     void incrementTimer()
     {
-        GameTimer.timer -= Time.deltaTime * GameTimer.timeMultiplier;
+        GameTimer.timer += Time.deltaTime * GameTimer.timeMultiplier;
     }
 
     void UpdateEyes()
