@@ -10,7 +10,7 @@ public class Distraction : MonoBehaviour
     private EYESTATE eyeState;
 
 
-    void Start()
+    protected void Start()
     {
 
         reduceTimer(timerReduceAmt);
