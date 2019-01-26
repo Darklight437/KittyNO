@@ -10,6 +10,11 @@ static class GameTimer
 
     public static float getTimeRatio()
     {
+        if(endTime == 0)
+        {
+            return 1;
+        }
+
         return timer / endTime;
     }
 }

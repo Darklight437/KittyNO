@@ -24,5 +24,4 @@ public class Paw : MonoBehaviour
     {
         transform.position = Vector3.Lerp(TimeZeroPos, Time100Pos.position, GameTimer.getTimeRatio());
     }
-
 }
