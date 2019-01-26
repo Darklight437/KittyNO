@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-enum EYESTATE
+public enum EYESTATE
 {
     ANGRY,
     BORED,
