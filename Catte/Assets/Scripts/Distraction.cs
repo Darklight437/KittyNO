@@ -8,11 +8,12 @@ public class Distraction : MonoBehaviour
     private float timerReduceAmt;
     [SerializeField]
     private EYESTATE eyeState;
-
+    [SerializeField]
+    private float lifetime;
 
     protected void Start()
     {
-
+        Destroy(gameObject, lifetime);
         reduceTimer(timerReduceAmt);
         Game.cat.setEyeState(eyeState);
     }
@@ -20,7 +21,7 @@ public class Distraction : MonoBehaviour
 
     private void reduceTimer(float reduceAmount)
     {
-        Game.timer -= reduceAmount;
+        Game.timer = Mathf.Max(0, Game.timer - timerReduceAmt);
     }
 
 
