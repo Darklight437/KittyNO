@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bowl : MonoBehaviour
+public class Breakable : MonoBehaviour
 {
     private Transform paw;
 
