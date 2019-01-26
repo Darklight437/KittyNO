@@ -37,16 +37,33 @@ public class Cat : MonoBehaviour
 
     public AudioClip kamehameha;
 
-	void Start ()
+    [SerializeField]
+    private Material[] catMaterials;
+
+    [SerializeField]
+    private Material[] pawMaterials;
+
+    void Start ()
     {
         Game.endTime = timeLimit;
         Game.cat = this;
+
+        int catType = Random.Range(0, 2);
+
+        GetComponent<Renderer>().material = catMaterials[catType];
+        GameObject.Find("Paw").GetComponent<Renderer>().material = pawMaterials[catType];
 	}
 	
 	void Update ()
     {
         UpdateEyes();
         incrementTimer();
+
+        // restart game with r (debug)
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            Game.Restart();
+        }
 	}
 
     void incrementTimer()

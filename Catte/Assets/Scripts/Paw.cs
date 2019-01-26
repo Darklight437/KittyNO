@@ -17,7 +17,7 @@ public class Paw : MonoBehaviour
     void Start ()
     {
         TimeZeroPos = transform.position;
-	}
+    }
 
     //paw position & timer updating handled in fixedUpdate
     private void Update()

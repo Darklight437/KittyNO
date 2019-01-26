@@ -68,4 +68,14 @@ static class Game
             }
         }
     }
+
+    // restarts the game
+    public static void Restart()
+    {
+        clicks = 0;
+        timeMultiplier = 1;
+        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+        cat = null;
+        uiController = null;
+    }
 }

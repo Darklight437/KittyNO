@@ -98,7 +98,7 @@ MonoBehaviour:
   timerReduceAmt: 14.45
   eyeState: 13
   lifetime: 4
-  screenLeft: -6
+  screenLeft: -7
   minHeight: 0.12
   maxHeight: 4.05
   moveSpeed: 5
