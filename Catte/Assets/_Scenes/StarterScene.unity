@@ -225,7 +225,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 90
+  field of view: 60
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -250,7 +250,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 534669902}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: 1, z: -13.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -541,7 +541,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1061792012
 GameObject:
@@ -627,7 +627,7 @@ Transform:
   m_LocalScale: {x: 18.20294, y: 0.46426, z: 0.43942758}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1061792017
 MonoBehaviour:
@@ -640,7 +640,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11f62c048f61c8646a92b64860517e05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeZeroPos: {fileID: 1580536759}
   Time100Pos: {fileID: 980675441}
 --- !u!1001 &1403003318
 Prefab:
@@ -721,7 +720,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab45ea13b8153ad45880ec479fa3f906, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eyeState: 0
+  eyeState: 9
   eyeTextures:
   - {fileID: 2800000, guid: 54d85be8ef6341441ab02e4a1edc85ea, type: 3}
   - {fileID: 2800000, guid: 7e9fa9e4878eede4eb4331a4a411f67d, type: 3}
@@ -741,34 +740,6 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 3be468dc0001f744f8e1fffc7068160a, type: 3}
   - {fileID: 2800000, guid: e85bea9952c73e24b941cf014209b842, type: 3}
   timeLimit: 10
---- !u!1 &1580536758
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1580536759}
-  m_Layer: 0
-  m_Name: pawStart
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1580536759
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1580536758}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.82, y: -0.04, z: -7.84}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1609488227
 GameObject:
   m_ObjectHideFlags: 0
@@ -780,6 +751,7 @@ GameObject:
   - component: {fileID: 1609488230}
   - component: {fileID: 1609488229}
   - component: {fileID: 1609488228}
+  - component: {fileID: 1609488231}
   m_Layer: 0
   m_Name: Bowl
   m_TagString: Untagged
@@ -839,9 +811,20 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1609488227}
   m_LocalRotation: {x: -0, y: 0.4999996, z: -0, w: 0.8660257}
-  m_LocalPosition: {x: -2.7000005, y: -0.145, z: -7.27091}
+  m_LocalPosition: {x: 2.55, y: -0.145, z: -7.27091}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1609488231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1609488227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dfdef47209a7ce4e819aeb40c72ee38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
