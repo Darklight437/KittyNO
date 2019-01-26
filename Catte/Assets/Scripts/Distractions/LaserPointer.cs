@@ -18,7 +18,6 @@ public class LaserPointer : Distraction
         base.Start();
         transform.position += (Vector3)Random.insideUnitCircle * randomOffsetRadius;
 
-        GetComponent<LineRenderer>().startColor = GetComponent<LineRenderer>().endColor = Game.getRandomColor();
         GetComponent<LineRenderer>().positionCount = 2;
         GetComponent<LineRenderer>().SetPosition(0, transform.position + transform.up * transform.localScale.y);
         GetComponent<LineRenderer>().SetPosition(1, transform.position + transform.up * (transform.localScale.y + laserDistance) + (Vector3)Random.insideUnitCircle * laserRadius);
