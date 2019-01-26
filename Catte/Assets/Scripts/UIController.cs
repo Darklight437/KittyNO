@@ -13,6 +13,9 @@ public class UIController : MonoBehaviour
     [SerializeField]
     private GameObject laserPointer;
 
+    [SerializeField]
+    private GameObject yarn;
+
     public void spawnPetHand()
     {
         Instantiate(petHand);
@@ -26,5 +29,10 @@ public class UIController : MonoBehaviour
     public void spawnLaserPointer()
     {
         Instantiate(laserPointer);
+    }
+
+    public void spawnYarn()
+    {
+        Instantiate(yarn);
     }
 }
