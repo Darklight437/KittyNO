@@ -57,6 +57,11 @@ public class Cat : MonoBehaviour
         this.eyeState = eyeState;
     }
 
+    public void unpause()
+    {
+        Time.timeScale = 1.0f;
+    }
+
     void UpdateEyes()
     {
         GetComponentsInChildren<Renderer>()[1].material.mainTexture = eyeTextures[(int)eyeState];

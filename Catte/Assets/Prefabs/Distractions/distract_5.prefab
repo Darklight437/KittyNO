@@ -51,6 +51,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9eac91a8b7bea48498b0210445ead71c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerReduceAmt: 8
+  timerReduceAmt: 4.86
   eyeState: 0
   lifetime: 0

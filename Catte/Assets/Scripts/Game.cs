@@ -48,8 +48,19 @@ static class Game
     {
         if (clicks % 20 == 0)
         {
-            uiController.buttons[(clicks / 20) - 1].SetActive(true);
-            timeMultiplier *= 2.0f;
+            if(clicks != 160)
+            {
+                uiController.buttons[(clicks / 20) - 1].SetActive(true);
+                timeMultiplier *= 2.0f;
+            }
+
+            Time.timeScale = 0.1f;
+            cat.Invoke("unpause", 0.15f);
+
+            if(clicks == 160)
+            {
+                cat.gameObject.GetComponent<FinalSequence>().FinalEvent = true;
+            }
         }
     }
 }
