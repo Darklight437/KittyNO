@@ -115,5 +115,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerReduceAmt: 4
-  eyeState: 9
-  lifetime: 0.35
+  eyeState: 10
+  lifetime: 1
