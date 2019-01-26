@@ -23,4 +23,15 @@ static class Game
     {
         GameObject.FindObjectOfType<AudioSource>().PlayOneShot(soundEffect);
     }
+
+    public static Color getRandomColor()
+    {
+        Color color = Color.white;
+
+        color.r = Random.Range(0.0f, 1.0f);
+        color.g = Random.Range(0.0f, 1.0f);
+        color.b = Random.Range(0.0f, 1.0f);
+
+        return color;
+    }
 }
