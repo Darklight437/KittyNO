@@ -35,6 +35,8 @@ public class Cat : MonoBehaviour
     [SerializeField]
     private float timeLimit;
 
+    public AudioClip kamehameha;
+
 	void Start ()
     {
         Game.endTime = timeLimit;

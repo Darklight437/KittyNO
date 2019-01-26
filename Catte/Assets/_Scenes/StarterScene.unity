@@ -1888,7 +1888,7 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 25d96c1d12416cb4592498fb877d5e16, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2145,8 +2145,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 932532487}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.04, y: -0.75, z: -7.34}
-  m_LocalScale: {x: 7.515, y: 1, z: 7.3119}
+  m_LocalPosition: {x: 0.04, y: -4, z: -7.34}
+  m_LocalScale: {x: 7.5, y: 7.5, z: 7.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -2377,18 +2377,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1039618248}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 752195749}
-        m_MethodName: spawnDistraction
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 8
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 1
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1039618248
@@ -2781,6 +2770,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.8
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 3c3277a6222fd464b8b3d47605ea1be5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7328a8ebc84b3cc428dfccfb6a38bd70, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c3277a6222fd464b8b3d47605ea1be5, type: 3}
   m_IsPrefabAsset: 0
@@ -2826,6 +2819,7 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 6feeb84c78e74da469683e0dda085bd4, type: 3}
   - {fileID: 2800000, guid: e85bea9952c73e24b941cf014209b842, type: 3}
   timeLimit: 90
+  kamehameha: {fileID: 8300000, guid: f04c93330fe77024b90fd4d27b6ab5d6, type: 3}
 --- !u!114 &1403003324
 MonoBehaviour:
   m_ObjectHideFlags: 0

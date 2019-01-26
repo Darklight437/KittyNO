@@ -48,7 +48,12 @@ static class Game
     {
         if (clicks % 20 == 0)
         {
-            if(clicks != 160)
+            if(clicks == 140)
+            {
+                PlaySoundEffect(cat.kamehameha);
+            }
+
+            if(clicks < 161)
             {
                 uiController.buttons[(clicks / 20) - 1].SetActive(true);
                 timeMultiplier *= 2.0f;
