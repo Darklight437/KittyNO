@@ -96,5 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerReduceAmt: 1
+  eyeState: 9
+  lifetime: 1
   petRadius: 0.52
   petSpeed: 20
