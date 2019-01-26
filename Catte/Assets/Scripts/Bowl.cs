@@ -12,6 +12,9 @@ public class Bowl : MonoBehaviour
     [Tooltip("When the object gets past this point on the x axis it is destroyed")]
     private float destroyPoint;
 
+    [SerializeField]
+    private AudioClip breakSound;
+
     private void Start()
     {
         // find the paw
@@ -29,6 +32,7 @@ public class Bowl : MonoBehaviour
 
         if(transform.position.x <= destroyPoint)
         {
+            Game.PlaySoundEffect(breakSound);
             Destroy(gameObject);
         }
     }
