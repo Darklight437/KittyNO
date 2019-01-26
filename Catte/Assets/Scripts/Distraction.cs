@@ -5,11 +5,13 @@ using UnityEngine;
 public class Distraction : MonoBehaviour
 {
 
+    private float timerReduceAmt;
 	// Use this for initialization
-	void Start ()
+    void createDistraction()
     {
-		
-	}
+
+        reduceTimer(timerReduceAmt);
+    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -19,8 +21,9 @@ public class Distraction : MonoBehaviour
 
     private void reduceTimer(float reduceAmount)
     {
-
+        Game.timer -= reduceAmount;
     }
+
 
     //no function should be nessecary for playing the animation as we can just play on awake
 

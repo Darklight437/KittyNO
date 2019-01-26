@@ -26,8 +26,8 @@ enum EYESTATE
 
 public class Cat : MonoBehaviour
 {
-    [SerializeField]
-    private EYESTATE eyeState;
+    
+    public EYESTATE eyeState;
 
     [SerializeField]
     private List<Texture2D> eyeTextures;
