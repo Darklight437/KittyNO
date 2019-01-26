@@ -10,11 +10,8 @@ public class Yarn : Distraction
 	new protected void Start ()
     {
         base.Start();
+        GetComponent<Renderer>().material.color = Game.getRandomColor();
 	}
 	
-	// Update is called once per frame
-	void Update ()
-    {
-		
-	}
+
 }
