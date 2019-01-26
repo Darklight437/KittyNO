@@ -23,6 +23,4 @@ public class Distraction : MonoBehaviour
     {
         Game.timer = Mathf.Max(0, Game.timer - timerReduceAmt);
     }
-
-
 }
