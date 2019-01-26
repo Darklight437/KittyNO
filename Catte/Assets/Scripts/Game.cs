@@ -7,6 +7,7 @@ static class Game
     public static float timer;
     public static float timeMultiplier = 1;
     public static float endTime;
+    public static Cat cat;
 
     public static float getTimeRatio()
     {

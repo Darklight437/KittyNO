@@ -38,6 +38,7 @@ public class Cat : MonoBehaviour
 	void Start ()
     {
         Game.endTime = timeLimit;
+        Game.cat = this;
 	}
 	
 	void Update ()
@@ -49,6 +50,11 @@ public class Cat : MonoBehaviour
     void incrementTimer()
     {
         Game.timer += Time.deltaTime * Game.timeMultiplier;
+    }
+
+    public void setEyeState(EYESTATE eyeState)
+    {
+        this.eyeState = eyeState;
     }
 
     void UpdateEyes()

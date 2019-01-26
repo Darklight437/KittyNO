@@ -4,20 +4,19 @@ using UnityEngine;
 
 public class Distraction : MonoBehaviour
 {
-
+    [SerializeField]
     private float timerReduceAmt;
-	// Use this for initialization
-    void createDistraction()
+    [SerializeField]
+    private EYESTATE eyeState;
+
+
+    void Start()
     {
 
         reduceTimer(timerReduceAmt);
+        Game.cat.setEyeState(eyeState);
     }
 	
-	// Update is called once per frame
-	void Update ()
-    {
-		
-	}
 
     private void reduceTimer(float reduceAmount)
     {
