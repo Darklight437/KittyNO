@@ -20,6 +20,7 @@ enum EYESTATE
     REALISTIC,
     SAD,
     SLIT,
+    SQUARE,
     SUGOI
 }
 
@@ -36,7 +37,7 @@ public class Cat : MonoBehaviour
 
 	void Start ()
     {
-        GameTimer.endTime = timeLimit;
+        Game.endTime = timeLimit;
 	}
 	
 	void Update ()
@@ -47,7 +48,7 @@ public class Cat : MonoBehaviour
 
     void incrementTimer()
     {
-        GameTimer.timer += Time.deltaTime * GameTimer.timeMultiplier;
+        Game.timer += Time.deltaTime * Game.timeMultiplier;
     }
 
     void UpdateEyes()

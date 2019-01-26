@@ -22,6 +22,6 @@ public class Paw : MonoBehaviour
     //paw position & timer updating handled in fixedUpdate
     private void Update()
     {
-        transform.position = Vector3.Lerp(TimeZeroPos, Time100Pos.position, GameTimer.getTimeRatio());
+        transform.position = Vector3.Lerp(TimeZeroPos, Time100Pos.position, Game.getTimeRatio());
     }
 }
