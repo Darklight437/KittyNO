@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c2d523b50e304442b5ba4f342de7256, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerReduceAmt: 20
+  timerReduceAmt: 1.27
   eyeState: 14
   lifetime: 1
   pokeSpeed: 10

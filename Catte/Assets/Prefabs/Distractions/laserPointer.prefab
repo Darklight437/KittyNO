@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0abcf46f8e698714a85a78c59e6bc4b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerReduceAmt: 3
+  timerReduceAmt: 1.87
   eyeState: 3
   lifetime: 1
   laserDistance: 3.5

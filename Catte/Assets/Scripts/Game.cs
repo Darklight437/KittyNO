@@ -8,6 +8,15 @@ static class Game
     public static float timeMultiplier = 1;
     public static float endTime;
     public static Cat cat;
+    public static UIController uiController;
+
+    private static int clicks = 0;
+
+    public static int totalClicks
+    {
+        get { return clicks; }
+        set { clicks = value; checkUnlocks(); }
+    }
 
     public static float getTimeRatio()
     {
@@ -33,5 +42,14 @@ static class Game
         color.b = Random.Range(0.0f, 1.0f);
 
         return color;
+    }
+
+    private static void checkUnlocks()
+    {
+        if (clicks % 20 == 0)
+        {
+            uiController.buttons[(clicks / 20) - 1].SetActive(true);
+            timeMultiplier *= 2.0f;
+        }
     }
 }

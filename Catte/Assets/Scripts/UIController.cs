@@ -5,34 +5,30 @@ using UnityEngine;
 public class UIController : MonoBehaviour
 {
     [SerializeField]
-    private GameObject petHand;
+    private GameObject[] distractions;
 
-    [SerializeField]
-    private GameObject pokeHand;
+    // list of buttons to be enabled
+    public GameObject[] buttons = new GameObject[8];
 
-    [SerializeField]
-    private GameObject laserPointer;
-
-    [SerializeField]
-    private GameObject yarn;
-
-    public void spawnPetHand()
+    private void Start()
     {
-        Instantiate(petHand);
+        Game.uiController = this;
+
+        // disbale all the buttons
+        for (int i = 0; i < 8; i++)
+        {
+            buttons[i] = GetComponentsInChildren<UnityEngine.UI.Image>()[i + 2].gameObject;
+        }
+
+        foreach(GameObject button in buttons)
+        {
+            button.SetActive(false);
+        }
     }
 
-    public void spawnPokeHand()
+    public void spawnDistraction(int id)
     {
-        Instantiate(pokeHand);
-    }
-
-    public void spawnLaserPointer()
-    {
-        Instantiate(laserPointer);
-    }
-
-    public void spawnYarn()
-    {
-        Instantiate(yarn);
+        Game.totalClicks++;
+        Instantiate(distractions[id]);
     }
 }
