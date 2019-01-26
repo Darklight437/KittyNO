@@ -2,15 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UIController : MonoBehaviour {
+public class UIController : MonoBehaviour
+{
+    [SerializeField]
+    private GameObject petHand;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public void spawnPetHand()
+    {
+        Instantiate(petHand);
+    }
 }
