@@ -132,6 +132,6 @@ static class Game
         cat = null;
         paw = null;
         uiController = null;
-        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
     }
 }
