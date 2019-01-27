@@ -98,7 +98,7 @@ public class Cat : MonoBehaviour
 
     public void spawnExplosion()
     {
-        GameObject tempExplosion = Instantiate<GameObject>(explosionPrefab,transform.position + ((Vector3)Random.insideUnitCircle * 2), Quaternion.identity);
+        GameObject tempExplosion = Instantiate<GameObject>(explosionPrefab,transform.position + ((Vector3)Random.insideUnitCircle * 5), Quaternion.identity);
         Destroy(tempExplosion, 0.9f);
     }
 
