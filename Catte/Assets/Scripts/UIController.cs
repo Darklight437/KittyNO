@@ -38,4 +38,10 @@ public class UIController : MonoBehaviour
             Game.PlaySoundEffect(audioClips[id]);
         }
     }
+
+    // "set" total clicks to trigger checkUnlocks
+    public void battleClick()
+    {
+        Game.totalClicks = Game.totalClicks;
+    }
 }

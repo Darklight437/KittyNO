@@ -570,6 +570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11f62c048f61c8646a92b64860517e05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TimeZeroPos: {x: 0, y: 0, z: 0}
   Time100Pos: {fileID: 980675441}
 --- !u!1 &108724729
 GameObject:
@@ -833,7 +834,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &173055864
 GameObject:
@@ -947,7 +948,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 660cd429afc311c46a8d42eee108f350, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 660cd429afc311c46a8d42eee108f350, type: 3}
       propertyPath: m_LocalScale.x
@@ -1392,6 +1393,7 @@ GameObject:
   - component: {fileID: 534669904}
   - component: {fileID: 534669903}
   - component: {fileID: 534669906}
+  - component: {fileID: 534669908}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1554,6 +1556,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &534669908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 534669902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24f77228505a31f4ea278623380ab938, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  intensity: 0
 --- !u!1 &585293080
 GameObject:
   m_ObjectHideFlags: 0
@@ -2559,7 +2573,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1039618248}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 752195749}
+        m_MethodName: battleClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1039618248
@@ -3026,7 +3051,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3c3277a6222fd464b8b3d47605ea1be5, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3c3277a6222fd464b8b3d47605ea1be5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -3101,21 +3126,6 @@ MonoBehaviour:
   pawMaterials:
   - {fileID: 2100000, guid: bfb2cc249c347ab4bba2f6786157633c, type: 2}
   - {fileID: 2100000, guid: e720ead7c5c2c5a4fb7591a706d24540, type: 2}
---- !u!114 &1403003324
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1403003320}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d33775d77f5bb5d48a2467369623a924, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Aura: {fileID: 852482125}
-  EyeL: {fileID: 585293080}
-  EyeR: {fileID: 924720183}
-  FinalEvent: 0
 --- !u!1 &1494443040
 GameObject:
   m_ObjectHideFlags: 0
@@ -3342,7 +3352,7 @@ Transform:
   m_LocalScale: {x: 50, y: 25, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1821175001
 GameObject:

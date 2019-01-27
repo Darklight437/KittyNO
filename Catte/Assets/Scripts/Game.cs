@@ -77,6 +77,9 @@ static class Game
                 // enable eye shake
                 cat.InvokeRepeating("moveEyes", 0.0f, 1.0f / 30.0f);
 
+                // enable camera shake
+                Camera.main.GetComponent<CameraShake>().intensity = 0.1f;
+
                 Camera.main.GetComponent<AudioSource>().clip = cat.finalBattleMusic;
                 Camera.main.GetComponent<AudioSource>().Play();
                 Time.timeScale = 0.1f;
@@ -89,9 +92,11 @@ static class Game
         {
             float t = Time.time - finalBattleStart;
 
-            float sn = Mathf.Sin(t);
+            float sn = Mathf.Sin(t * 10.0f) * 0.5f + 0.5f;
 
-             paw.transform.position = Vector3.Lerp(paw.TimeZeroPos, paw.Time100Pos.position, sn)
+            Debug.Log(t);
+
+            paw.transform.position = Vector3.Lerp(paw.TimeZeroPos, paw.Time100Pos.position, sn);
         }
     }
 
