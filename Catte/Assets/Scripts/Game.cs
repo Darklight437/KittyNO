@@ -8,7 +8,12 @@ static class Game
     public static float timeMultiplier = 1;
     public static float endTime;
     public static Cat cat;
+    public static Paw paw;
     public static UIController uiController;
+
+    // time that the final event started
+    public static bool finalBattle = false;
+    private static float finalBattleStart;
 
     private static int clicks = 0;
 
@@ -56,18 +61,37 @@ static class Game
             if(clicks < 161)
             {
                 uiController.buttons[(clicks / 20) - 1].SetActive(true);
+                Time.timeScale = 0.1f;
+                cat.Invoke("unpause", 0.15f);
                 timeMultiplier *= 2.0f;
             }
 
-            Time.timeScale = 0.1f;
-            cat.Invoke("unpause", 0.15f);
-
             if(clicks == 160)
             {
-                cat.gameObject.GetComponent<FinalSequence>().FinalEvent = true;
+                finalBattleStart = Time.time;
+                finalBattle = true;
+
+                // enable aura
+                cat.GetComponentInChildren<SpriteRenderer>(true).gameObject.SetActive(true);
+
+                // enable eye shake
+                cat.InvokeRepeating("moveEyes", 0.0f, 1.0f / 30.0f);
+
                 Camera.main.GetComponent<AudioSource>().clip = cat.finalBattleMusic;
                 Camera.main.GetComponent<AudioSource>().Play();
+                Time.timeScale = 0.1f;
+                cat.Invoke("unpause", 0.6f);
             }
+        }
+
+        // final event
+        if(clicks > 160)
+        {
+            float t = Time.time - finalBattleStart;
+
+            float sn = Mathf.Sin(t);
+
+             paw.transform.position = Vector3.Lerp(paw.TimeZeroPos, paw.Time100Pos.position, sn)
         }
     }
 
@@ -77,8 +101,11 @@ static class Game
         clicks = 0;
         timeMultiplier = 1;
         Time.timeScale = 1.0f;
+        finalBattle = false;
+        finalBattleStart = 0;
         UnityEngine.SceneManagement.SceneManager.LoadScene(0);
         cat = null;
+        paw = null;
         uiController = null;
     }
 }

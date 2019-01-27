@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Paw : MonoBehaviour
 {
-    private Vector3 TimeZeroPos;
+    [HideInInspector]
+    public Vector3 TimeZeroPos;
 
     //finished position
-    [SerializeField]
-    private Transform Time100Pos;
+    public Transform Time100Pos;
 
     //move from one to the other by moving linearly from pos0 to pos100 along X
     //by reading timer inside GameTimer, updating it by time and GameTimer's multiplier variable
@@ -16,12 +16,16 @@ public class Paw : MonoBehaviour
 
     void Start ()
     {
+        Game.paw = this;
         TimeZeroPos = transform.position;
     }
 
     //paw position & timer updating handled in fixedUpdate
     private void Update()
     {
-        transform.position = Vector3.Lerp(TimeZeroPos, Time100Pos.position, Game.getTimeRatio());
+        if(!Game.finalBattle)
+        {
+            transform.position = Vector3.Lerp(TimeZeroPos, Time100Pos.position, Game.getTimeRatio());
+        }
     }
 }

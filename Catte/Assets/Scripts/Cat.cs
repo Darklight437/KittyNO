@@ -29,6 +29,9 @@ public class Cat : MonoBehaviour
     
     public EYESTATE eyeState;
 
+    private GameObject[] eyes = new GameObject[2];
+    private Vector3[] eyePositions = new Vector3[2];
+
     [SerializeField]
     private List<Texture2D> eyeTextures;
 
@@ -46,6 +49,14 @@ public class Cat : MonoBehaviour
 
     void Start ()
     {
+        // get references to eyes
+        eyes[0] = GetComponentsInChildren<Renderer>()[1].gameObject;
+        eyes[1] = GetComponentsInChildren<Renderer>()[2].gameObject;
+
+        // store eyes start positions
+        eyePositions[0] = eyes[0].transform.position;
+        eyePositions[1] = eyes[1].transform.position;
+
         Game.endTime = timeLimit;
         Game.cat = this;
 
@@ -84,7 +95,13 @@ public class Cat : MonoBehaviour
 
     void UpdateEyes()
     {
-        GetComponentsInChildren<Renderer>()[1].material.mainTexture = eyeTextures[(int)eyeState];
-        GetComponentsInChildren<Renderer>()[2].material.mainTexture = eyeTextures[(int)eyeState];
+        eyes[0].GetComponent<Renderer>().material.mainTexture = eyeTextures[(int)eyeState];
+        eyes[1].GetComponent<Renderer>().material.mainTexture = eyeTextures[(int)eyeState];
+    }
+
+    void moveEyes()
+    {
+        eyes[0].transform.position = eyePositions[0] + (Vector3)Random.insideUnitCircle * 0.2f;
+        eyes[1].transform.position = eyePositions[1] + (Vector3)Random.insideUnitCircle * 0.2f;
     }
 }

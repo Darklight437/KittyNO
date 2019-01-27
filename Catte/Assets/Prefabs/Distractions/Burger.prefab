@@ -114,8 +114,8 @@ MonoBehaviour:
   eyeState: 5
   lifetime: 3
   spawnHeight: 5
-  tableHeight: 0.57
-  width: 10
+  tableHeight: 0.41
+  width: 9
   fallSpeed: 10
   loop: {fileID: 1768450149000240, guid: 956f5d9fc66f1b844ba93dd78990ab03, type: 2}
   loopRadius: 0.54
