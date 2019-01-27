@@ -20,6 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4895834070626970}
   - component: {fileID: 114445818875589190}
+  - component: {fileID: 23818243864054394}
+  - component: {fileID: 33777638945198158}
+  - component: {fileID: 114695093025478404}
   m_Layer: 0
   m_Name: Burger
   m_TagString: Untagged
@@ -34,12 +37,54 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1217785370403468}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -2.443, y: 0.419, z: -7.54}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &23818243864054394
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1217785370403468}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 2100000, guid: 5ff63ab310d7dd648b5502d6d8b738ce, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &33777638945198158
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1217785370403468}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &114445818875589190
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -54,3 +99,30 @@ MonoBehaviour:
   timerReduceAmt: 25.6
   eyeState: 5
   lifetime: 3
+--- !u!114 &114695093025478404
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1217785370403468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bd1f6aaf148a144589506e955ddc748, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerReduceAmt: 4.86
+  eyeState: 5
+  lifetime: 3
+  spawnHeight: 5
+  tableHeight: 0.57
+  width: 10
+  fallSpeed: 10
+  loop: {fileID: 1768450149000240, guid: 956f5d9fc66f1b844ba93dd78990ab03, type: 2}
+  loopRadius: 0.54
+  loopColors:
+  - {r: 0.84705883, g: 0.41568628, b: 0.44705883, a: 1}
+  - {r: 0.89411765, g: 0.7058824, b: 0.41960785, a: 1}
+  - {r: 0.9019608, g: 0.8509804, b: 0.26666668, a: 1}
+  - {r: 0.5058824, g: 0.6666667, b: 0.41960785, a: 1}
+  - {r: 0.3882353, g: 0.5803922, b: 0.6509804, a: 1}
+  - {r: 0.5803922, g: 0.5294118, b: 0.6, a: 1}
