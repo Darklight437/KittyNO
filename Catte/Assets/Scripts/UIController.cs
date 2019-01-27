@@ -10,6 +10,8 @@ public class UIController : MonoBehaviour
     // list of buttons to be enabled
     public GameObject[] buttons = new GameObject[8];
 
+    public AudioClip[] audioClips;
+
     private void Start()
     {
         Game.uiController = this;
@@ -30,5 +32,10 @@ public class UIController : MonoBehaviour
     {
         Game.totalClicks++;
         Instantiate(distractions[id]);
+
+        if(Random.Range(0, 5) == 0)
+        {
+            Game.PlaySoundEffect(audioClips[id]);
+        }
     }
 }

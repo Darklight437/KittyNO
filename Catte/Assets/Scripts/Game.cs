@@ -65,6 +65,8 @@ static class Game
             if(clicks == 160)
             {
                 cat.gameObject.GetComponent<FinalSequence>().FinalEvent = true;
+                Camera.main.GetComponent<AudioSource>().clip = cat.finalBattleMusic;
+                Camera.main.GetComponent<AudioSource>().Play();
             }
         }
     }

@@ -35,6 +35,7 @@ public class Cat : MonoBehaviour
     [SerializeField]
     private float timeLimit;
 
+    public AudioClip finalBattleMusic;
     public AudioClip kamehameha;
 
     [SerializeField]

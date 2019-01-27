@@ -1336,7 +1336,7 @@ GameObject:
   - component: {fileID: 534669906}
   m_Layer: 0
   m_Name: Main Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1410,7 +1410,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ff3baf407f8a8df44a52ca528a101c21, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d9c4d8ebb5d32654283b440c32ba8277, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1971,6 +1971,15 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  audioClips:
+  - {fileID: 8300000, guid: 5f06e7ad86e8009418191d307605e8e5, type: 3}
+  - {fileID: 8300000, guid: 8b77302106746e7419e3fee3d3fd2614, type: 3}
+  - {fileID: 8300000, guid: 3637201d89e6e24439b4e5318516c981, type: 3}
+  - {fileID: 8300000, guid: aed090f6e71db9146b1e852269b73a09, type: 3}
+  - {fileID: 8300000, guid: 90d26baba3bd36840a6dcaa62672b037, type: 3}
+  - {fileID: 8300000, guid: b1b284bfe2ed7e344b732659fd11f8dc, type: 3}
+  - {fileID: 8300000, guid: db7cc421362e11d45b49e1003a7d3d77, type: 3}
+  - {fileID: 8300000, guid: a5cf21e53ca4c8643b84350d49c76b89, type: 3}
 --- !u!1 &852482125
 GameObject:
   m_ObjectHideFlags: 0
@@ -2972,6 +2981,7 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 6feeb84c78e74da469683e0dda085bd4, type: 3}
   - {fileID: 2800000, guid: e85bea9952c73e24b941cf014209b842, type: 3}
   timeLimit: 100
+  finalBattleMusic: {fileID: 8300000, guid: f8d8bf4e57f6f584b9c6630b049ad0bb, type: 3}
   kamehameha: {fileID: 8300000, guid: f04c93330fe77024b90fd4d27b6ab5d6, type: 3}
   catMaterials:
   - {fileID: 2100000, guid: f30d20b3d88086f4ca99b772d74826bc, type: 2}
