@@ -117,7 +117,7 @@ static class Game
             cat.spawnExplosion();
 
             //Finished
-            if (clicks == 190)
+            if (clicks == 220)
             {
                 Application.Quit();
             }
