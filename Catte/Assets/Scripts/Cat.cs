@@ -49,6 +49,9 @@ public class Cat : MonoBehaviour
 
     void Start ()
     {
+        Game.endTime = timeLimit;
+        Game.cat = this;
+
         // get references to eyes
         eyes[0] = GetComponentsInChildren<Renderer>()[1].gameObject;
         eyes[1] = GetComponentsInChildren<Renderer>()[2].gameObject;
@@ -56,9 +59,6 @@ public class Cat : MonoBehaviour
         // store eyes start positions
         eyePositions[0] = eyes[0].transform.position;
         eyePositions[1] = eyes[1].transform.position;
-
-        Game.endTime = timeLimit;
-        Game.cat = this;
 
         int catType = Random.Range(0, 2);
 

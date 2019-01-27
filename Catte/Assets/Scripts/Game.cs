@@ -108,9 +108,9 @@ static class Game
         Time.timeScale = 1.0f;
         finalBattle = false;
         finalBattleStart = 0;
-        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
         cat = null;
         paw = null;
         uiController = null;
+        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
     }
 }

@@ -31,7 +31,12 @@ ModelImporter:
     4300004: geo_sprayHead
     4300006: geo_mainBody
     4300008: geo_screwCap
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: ff69425dda4ece744b2bd435df00564b, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

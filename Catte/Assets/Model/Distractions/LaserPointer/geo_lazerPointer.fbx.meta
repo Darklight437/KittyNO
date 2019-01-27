@@ -16,7 +16,12 @@ ModelImporter:
     3300002: geo_lazerButton
     4300000: geo_lazerBody
     4300002: geo_lazerButton
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: ce4e2718afa4c1945b658a4ceab65cf7, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
