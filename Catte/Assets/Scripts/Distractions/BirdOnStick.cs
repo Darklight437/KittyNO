@@ -27,7 +27,7 @@ public class BirdOnStick : Distraction
     private void Update()
     {
         // move right
-        transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
+        transform.Translate(Vector3.right * moveSpeed * Time.deltaTime, Space.World);
     }
 
     void OnDrawGizmosSelected()

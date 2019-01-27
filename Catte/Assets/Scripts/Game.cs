@@ -74,6 +74,7 @@ static class Game
     {
         clicks = 0;
         timeMultiplier = 1;
+        Time.timeScale = 1.0f;
         UnityEngine.SceneManagement.SceneManager.LoadScene(0);
         cat = null;
         uiController = null;
