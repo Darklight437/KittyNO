@@ -20,8 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4047082017309772}
   - component: {fileID: 33223091537026774}
-  - component: {fileID: 114725673582536342}
   - component: {fileID: 23002831233099570}
+  - component: {fileID: 114725673582536342}
   m_Layer: 0
   m_Name: Catnip
   m_TagString: Untagged
@@ -35,9 +35,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1107024104193886}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 5.13, z: -7.8}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 4.749, z: -7.8}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -57,7 +57,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 960b763e0f0860447bdd192358dd3e1f, type: 2}
+  - {fileID: 2100000, guid: b4d09feffc59a5445b6571b1fb36bb52, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -83,7 +83,7 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1107024104193886}
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300000, guid: b4d09feffc59a5445b6571b1fb36bb52, type: 3}
 --- !u!114 &114725673582536342
 MonoBehaviour:
   m_ObjectHideFlags: 1
