@@ -17,6 +17,11 @@ public class FinalSequence : MonoBehaviour
     public bool FinalEvent = false;
     private bool i = true;
 
+    //increment this some how 
+
+    private int clicksToWin = 30;
+    private int currClicks = 0;
+
     private void Start()
     {
         eyeRPosition = EyeR.transform.position;
@@ -25,13 +30,24 @@ public class FinalSequence : MonoBehaviour
 
     void Update ()
     {
-        if (FinalEvent && i)
+        if (FinalEvent)
         {
-            EyeL.transform.position = eyeLPosition + (Vector3)Random.insideUnitCircle * 0.2f;
-            EyeR.transform.position = eyeRPosition + (Vector3)Random.insideUnitCircle * 0.2f;
+            if (i)
+            {
+                //make eyes shake maddeningly
+                EyeL.transform.position = eyeLPosition + (Vector3)Random.insideUnitCircle * 0.2f;
+                EyeR.transform.position = eyeRPosition + (Vector3)Random.insideUnitCircle * 0.2f;
+                
+            }
+            //make the cat super saiyan
             Aura.SetActive(true);
-            
+
+            if (currClicks == clicksToWin)
+            {
+                //GAME WON CLAUSE PUT VICTORY STUFF HERE
+            }
         }
+        
          i = !i;
 	}
 }
