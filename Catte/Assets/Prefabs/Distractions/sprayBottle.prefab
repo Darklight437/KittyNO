@@ -446,6 +446,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerReduceAmt: 25.6
-  eyeState: 12
+  eyeState: 2
   lifetime: 2
   sprayRadius: 2

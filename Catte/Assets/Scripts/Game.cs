@@ -71,6 +71,9 @@ static class Game
 
             if(clicks == 160)
             {
+                cat.setEyeState(EYESTATE.ANGRY);
+                cat.UpdateEyes();
+
                 finalBattleStart = Time.time;
                 finalBattle = true;
 
@@ -78,7 +81,6 @@ static class Game
                 cat.GetComponentInChildren<SpriteRenderer>(true).gameObject.SetActive(true);
 
                 // enable eye shake
-                cat.setEyeState(EYESTATE.ANGRY);
                 cat.InvokeRepeating("moveEyes", 0.0f, 1.0f / 30.0f);
 
                 // enable camera shake
@@ -104,6 +106,8 @@ static class Game
         // final battle
         if(finalBattle)
         {
+            cat.setEyeState(EYESTATE.ANGRY);
+
             float t = Time.time - finalBattleStart;
 
             float sn = Mathf.Sin(t) * 0.5f + 0.5f;

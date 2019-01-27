@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerReduceAmt: 4.86
-  eyeState: 5
+  eyeState: 17
   lifetime: 3
   spawnHeight: 5
   tableHeight: 0.41

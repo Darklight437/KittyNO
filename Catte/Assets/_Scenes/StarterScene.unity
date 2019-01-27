@@ -3209,7 +3209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab45ea13b8153ad45880ec479fa3f906, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eyeState: 0
+  eyeState: 12
   eyeTextures:
   - {fileID: 2800000, guid: 54d85be8ef6341441ab02e4a1edc85ea, type: 3}
   - {fileID: 2800000, guid: 7e9fa9e4878eede4eb4331a4a411f67d, type: 3}

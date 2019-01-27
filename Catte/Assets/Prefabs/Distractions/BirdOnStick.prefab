@@ -227,7 +227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerReduceAmt: 14.45
-  eyeState: 13
+  eyeState: 15
   lifetime: 4
   screenLeft: -7
   minHeight: 0.12

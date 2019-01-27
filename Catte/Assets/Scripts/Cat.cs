@@ -89,9 +89,9 @@ public class Cat : MonoBehaviour
         Game.timer += Time.deltaTime * Game.timeMultiplier;
     }
 
-    public void setEyeState(EYESTATE eyeState)
+    public void setEyeState(EYESTATE newState)
     {
-        this.eyeState = eyeState;
+        eyeState = newState;
     }
 
     public void unpause()
@@ -106,10 +106,13 @@ public class Cat : MonoBehaviour
         Game.PlaySoundEffect(ExplosionFX);
     }
 
-    void UpdateEyes()
+    public void UpdateEyes()
     {
-        eyes[0].GetComponent<Renderer>().material.mainTexture = eyeTextures[(int)eyeState];
-        eyes[1].GetComponent<Renderer>().material.mainTexture = eyeTextures[(int)eyeState];
+        if(!Game.finalBattle)
+        {
+            eyes[0].GetComponent<Renderer>().material.mainTexture = eyeTextures[(int)eyeState];
+            eyes[1].GetComponent<Renderer>().material.mainTexture = eyeTextures[(int)eyeState];
+        }
     }
 
     void moveEyes()

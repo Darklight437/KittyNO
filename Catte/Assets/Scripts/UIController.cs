@@ -30,8 +30,8 @@ public class UIController : MonoBehaviour
 
     public void spawnDistraction(int id)
     {
-        Game.totalClicks++;
         Instantiate(distractions[id]);
+        Game.totalClicks++;
 
         if(Random.Range(0, 5) == 0)
         {
@@ -48,6 +48,7 @@ public class UIController : MonoBehaviour
     // "set" total clicks to trigger checkUnlocks
     public void debugClick()
     {
-        Game.totalClicks = 138;
+        Game.totalClicks = 159;
+        buttons[6].SetActive(true);
     }
 }
