@@ -42,6 +42,12 @@ public class UIController : MonoBehaviour
     // "set" total clicks to trigger checkUnlocks
     public void battleClick()
     {
-        Game.totalClicks = Game.totalClicks;
+        Game.totalClicks++;
+    }
+
+    // "set" total clicks to trigger checkUnlocks
+    public void debugClick()
+    {
+        Game.totalClicks = 160;
     }
 }

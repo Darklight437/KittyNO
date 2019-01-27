@@ -88,14 +88,12 @@ static class Game
             }
         }
 
-        // final event
-        if(clicks > 160)
+        // final battle
+        if(finalBattle)
         {
             float t = Time.time - finalBattleStart;
 
-            float sn = Mathf.Sin(t * 10.0f) * 0.5f + 0.5f;
-
-            Debug.Log(t);
+            float sn = Mathf.Sin(t) * 0.5f + 0.5f;
 
             paw.transform.position = Vector3.Lerp(paw.TimeZeroPos, paw.Time100Pos.position, sn);
         }
