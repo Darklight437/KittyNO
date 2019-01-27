@@ -75,6 +75,7 @@ static class Game
                 cat.GetComponentInChildren<SpriteRenderer>(true).gameObject.SetActive(true);
 
                 // enable eye shake
+                cat.setEyeState(EYESTATE.ANGRY);
                 cat.InvokeRepeating("moveEyes", 0.0f, 1.0f / 30.0f);
 
                 // enable camera shake
@@ -83,7 +84,7 @@ static class Game
                 Camera.main.GetComponent<AudioSource>().clip = cat.finalBattleMusic;
                 Camera.main.GetComponent<AudioSource>().Play();
                 Time.timeScale = 0.1f;
-                cat.Invoke("unpause", 0.6f);
+                cat.Invoke("unpause", 1.0f);
             }
         }
 
@@ -104,6 +105,7 @@ static class Game
     public static void Restart()
     {
         clicks = 0;
+        timer = 0;
         timeMultiplier = 1;
         Time.timeScale = 1.0f;
         finalBattle = false;
