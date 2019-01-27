@@ -50,6 +50,9 @@ public class Cat : MonoBehaviour
     [SerializeField]
     private GameObject explosionPrefab;
 
+    [SerializeField]
+    private AudioClip ExplosionFX;
+
     void Start ()
     {
         Game.endTime = timeLimit;
@@ -100,6 +103,7 @@ public class Cat : MonoBehaviour
     {
         GameObject tempExplosion = Instantiate<GameObject>(explosionPrefab,transform.position + ((Vector3)Random.insideUnitCircle * 5), Quaternion.identity);
         Destroy(tempExplosion, 0.9f);
+        Game.PlaySoundEffect(ExplosionFX);
     }
 
     void UpdateEyes()

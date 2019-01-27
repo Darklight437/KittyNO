@@ -3226,6 +3226,9 @@ MonoBehaviour:
   pawMaterials:
   - {fileID: 2100000, guid: bfb2cc249c347ab4bba2f6786157633c, type: 2}
   - {fileID: 2100000, guid: e720ead7c5c2c5a4fb7591a706d24540, type: 2}
+  explosionPrefab: {fileID: 1980408657501560, guid: 1cb13fc1cd19d2145ab6829c180fa4ca,
+    type: 2}
+  ExplosionFX: {fileID: 8300000, guid: 4e79a224ae664fe49947af4d08907fb9, type: 3}
 --- !u!1 &1494443040
 GameObject:
   m_ObjectHideFlags: 0
@@ -8174,7 +8177,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1775459413
 RectTransform:
   m_ObjectHideFlags: 0
