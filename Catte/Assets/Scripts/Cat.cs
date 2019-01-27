@@ -47,6 +47,9 @@ public class Cat : MonoBehaviour
     [SerializeField]
     private Material[] pawMaterials;
 
+    [SerializeField]
+    private GameObject explosionPrefab;
+
     void Start ()
     {
         Game.endTime = timeLimit;
@@ -91,6 +94,12 @@ public class Cat : MonoBehaviour
     public void unpause()
     {
         Time.timeScale = 1.0f;
+    }
+
+    public void spawnExplosion()
+    {
+        GameObject tempExplosion = Instantiate<GameObject>(explosionPrefab,transform.position + ((Vector3)Random.insideUnitCircle * 2), Quaternion.identity);
+        Destroy(tempExplosion, 0.9f);
     }
 
     void UpdateEyes()

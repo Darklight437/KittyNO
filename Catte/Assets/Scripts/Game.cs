@@ -109,6 +109,14 @@ static class Game
             float sn = Mathf.Sin(t) * 0.5f + 0.5f;
 
             paw.transform.position = Vector3.Lerp(paw.TimeZeroPos, paw.Time100Pos.position, sn);
+
+            cat.spawnExplosion();
+
+            //Finished
+            if (clicks == 190)
+            {
+                Application.Quit();
+            }
         }
     }
 
