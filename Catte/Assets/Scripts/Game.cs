@@ -56,6 +56,9 @@ static class Game
             if(clicks == 140)
             {
                 PlaySoundEffect(cat.kamehameha);
+
+                // activate laser
+                GameObject.Find("Final Laser").transform.position += Vector3.right * 20.0f;
             }
 
             if(clicks < 161)
@@ -80,6 +83,16 @@ static class Game
 
                 // enable camera shake
                 Camera.main.GetComponent<CameraShake>().intensity = 0.1f;
+
+                // disable final laser particle system
+                ParticleSystem.EmissionModule p = GameObject.Find("Final Laser").GetComponent<ParticleSystem>().emission;
+                p.enabled = false;
+
+                // enable the laser cylinder
+                paw.laser.SetActive(true);
+
+                // disable breakable objects
+                GameObject.Find("Breakable Things").SetActive(false);
 
                 Camera.main.GetComponent<AudioSource>().clip = cat.finalBattleMusic;
                 Camera.main.GetComponent<AudioSource>().Play();

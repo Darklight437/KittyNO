@@ -10,6 +10,9 @@ public class Paw : MonoBehaviour
     //finished position
     public Transform Time100Pos;
 
+    [HideInInspector]
+    public GameObject laser;
+
     //move from one to the other by moving linearly from pos0 to pos100 along X
     //by reading timer inside GameTimer, updating it by time and GameTimer's multiplier variable
 
@@ -17,6 +20,8 @@ public class Paw : MonoBehaviour
     void Start ()
     {
         Game.paw = this;
+        laser = transform.Find("Laser").gameObject;
+        laser.SetActive(false);
         TimeZeroPos = transform.position;
     }
 
