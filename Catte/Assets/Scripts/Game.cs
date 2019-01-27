@@ -119,7 +119,8 @@ static class Game
             //Finished
             if (clicks == 220)
             {
-                Application.Quit();
+                cat.enableBlueScreen();
+                cat.Invoke("crashGame", 3.0f);
             }
         }
     }

@@ -53,6 +53,9 @@ public class Cat : MonoBehaviour
     [SerializeField]
     private AudioClip ExplosionFX;
 
+    [SerializeField]
+    private GameObject blueScreen;
+
     void Start ()
     {
         Game.endTime = timeLimit;
@@ -119,5 +122,15 @@ public class Cat : MonoBehaviour
     {
         eyes[0].transform.position = eyePositions[0] + (Vector3)Random.insideUnitCircle * 0.2f;
         eyes[1].transform.position = eyePositions[1] + (Vector3)Random.insideUnitCircle * 0.2f;
+    }
+
+    public void enableBlueScreen()
+    {
+        blueScreen.SetActive(true);
+    }
+
+    public void crashGame()
+    {
+        Application.Quit();
     }
 }
